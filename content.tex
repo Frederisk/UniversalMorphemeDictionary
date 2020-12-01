@@ -1,0 +1,93 @@
+\documentclass[10pt, twoside, fontset = none]{ctexbook}
+    \setCJKmainfont{Source Han Serif TC}
+    \setCJKsansfont{Source Han Sans TC}
+    \setCJKmonofont{Source Han Mono TC}
+    % 思源中文
+    % 字型
+    \columnseprule = 0.4pt
+    % 分欄線粗細
+    \setlength{\parindent}{0em}
+    % 取消縮進
+
+% \usepackage[utf8]{inputenc}
+% \usepackage[T1]{fontenc}
+
+\usepackage{geometry}
+    \geometry{paper = b6j}
+    \geometry{columnsep = 10pt}
+    \geometry{headsep = 0pt}
+    % \geometry{footskip = 0pt}
+% 間距和邊距 top=3.5cm,bottom=3.5cm,left=3.7cm,right=4.7cm
+
+\usepackage{fancyhdr}
+    % 頁眉頁腳
+    \fancyhf{}
+    % 清除舊格式
+    \fancyhead[L]{\textsf{\rightmark}}
+    \fancyhead[R]{\textsf{\leftmark}}
+    \renewcommand{\headrulewidth}{1pt}
+    \fancyhead[C]{\textrm{\textbf{\thepage}}}
+    % 頁眉
+    % \fancyfoot[]{}
+    % 關閉頁腳
+    % 頁腳
+    \pagestyle{fancy}
+    % 起效
+
+\usepackage{multicol}
+
+\usepackage{fontspec}
+    \setmainfont{Linux Libertine}
+    \setsansfont{Linux Biolinum}
+    \setmonofont{Linux Libertine Mono}
+    % Linux 西文字型
+
+\usepackage[bf]{titlesec}
+    \titleformat{\chapter}
+        [display]{\LARGE\sffamily\filcenter\bfseries}
+        {\MakeUppercase{\chaptertitlename}\thechapter}
+        {0pt}
+        {\thispagestyle{empty}}
+        []
+% 章節標題樣式 bold, sans-serif, centered
+
+\usepackage{paralist}
+% 隨機內容
+
+\newenvironment
+    {character}[1]
+    {\chapter*{#1}
+    \fontsize{6pt}{6pt}\selectfont
+    \begin{multicols}{2}}
+    {\end{multicols}}
+
+\newenvironment{entry}[2]
+    {\hangafter = 1
+    \setlength{\hangindent}{1em}
+    \markboth{#1}{#1}
+    \textbf{#1}{\textsuperscript{<\textit{#2}>}}}
+    {\par}
+
+
+\begin{document}
+    % \part*{Cover}
+    % \part*{Content}
+    \begin{character}{A a}
+        \begin{entry}{A}{eng}
+            {［美式/ei/;澳洲式/ai/］I. a. \textbf{\textit{n.}}
+            \begin{inparaenum}
+                \item 英文字母中的第一個，字母A：The first of letter of the word "Apple" is \textit{A}. Apple這個單字的首字母是A。
+                \item （由該字母在字母表中的位置衍生而來的）第一個，首個：Item \textit{A} is a number, and item B is also a number. 第一個項目是數字，第二個也是數字。
+            \end{inparaenum}
+            II. a. \textbf{\textit{n.}}}
+            \begin{inparaenum}
+                \item （分配字母的等級中的）最高等級，首等；首要，最前方：We assign their levels inspected a rating from A through D, depending on the score.根據得分，我們將他們以等級A到G評級。
+            \end{inparaenum}
+        \end{entry}
+        \begin{entry}{aback}{eng}
+            {扉頁是指在書籍封面或襯頁之後、正文之前的一頁。扉頁上一般印有書名、作者或譯者姓名、出版社和出版的年月等。扉頁也起裝飾作用，增加書籍的美觀。}
+        \end{entry}
+
+    \end{character}
+
+\end{document}
