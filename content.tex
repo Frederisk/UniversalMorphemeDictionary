@@ -1,46 +1,42 @@
-\documentclass[10pt, twoside, fontset = none]{ctexbook}
-    \setCJKmainfont{Source Han Serif TC}
+\documentclass[10pt, twoside, fontset = none]{ctexbook} % 字型
+    \setCJKmainfont{Source Han Serif TC} % 思源中文
     \setCJKsansfont{Source Han Sans TC}
     \setCJKmonofont{Source Han Mono TC}
-    % 思源中文
-    % 字型
-    \columnseprule = 0.4pt
-    % 分欄線粗細
-    \setlength{\parindent}{0em}
-    % 取消縮進
+
+    \columnseprule = 0.4pt % 分欄線粗細
+
+    \setlength{\parindent}{0em} % 取消縮進
+    \setlength{\parskip}{0em} % 取消段間距
+
 
 % \usepackage[utf8]{inputenc}
 % \usepackage[T1]{fontenc}
 
 \usepackage{geometry}
-    \geometry{paper = b6j}
+    \geometry{paper = b6j} % B6 Japan paper
     \geometry{columnsep = 10pt}
     \geometry{headsep = 0pt}
     % \geometry{footskip = 0pt}
 % 間距和邊距 top=3.5cm,bottom=3.5cm,left=3.7cm,right=4.7cm
 
-\usepackage{fancyhdr}
-    % 頁眉頁腳
-    \fancyhf{}
-    % 清除舊格式
+\usepackage{fancyhdr} % 頁眉頁腳
+    \fancyhf{} % 清除舊格式
+    % 頁眉
     \fancyhead[L]{\textsf{\rightmark}}
     \fancyhead[R]{\textsf{\leftmark}}
     \renewcommand{\headrulewidth}{1pt}
     \fancyhead[C]{\textrm{\textbf{\thepage}}}
-    % 頁眉
-    % \fancyfoot[]{}
     % 關閉頁腳
-    % 頁腳
-    \pagestyle{fancy}
-    % 起效
+    % \fancyfoot[]{}
+    \pagestyle{fancy} % 起效
+
 
 \usepackage{multicol}
 
-\usepackage{fontspec}
+\usepackage{fontspec} % Linux 西文字型
     \setmainfont{Linux Libertine}
     \setsansfont{Linux Biolinum}
     \setmonofont{Linux Libertine Mono}
-    % Linux 西文字型
 
 \usepackage[bf]{titlesec}
     \titleformat{\chapter}
@@ -54,8 +50,7 @@
 \usepackage{paralist}
 % 隨機內容
 
-\newenvironment
-    {character}[1]
+\newenvironment{character}[1]
     {\chapter*{#1}
     \fontsize{6pt}{6pt}\selectfont
     \begin{multicols}{2}}
